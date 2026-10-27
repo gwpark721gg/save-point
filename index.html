@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="세이브 포인트">
+<title>세이브 포인트</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="app.css">
+<style>
+  main { max-width: 520px; margin: 0 auto; padding: calc(env(safe-area-inset-top) + 24px) 16px 32px; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 20px; line-height: 1.6; }
+  .game { display: flex; align-items: center; gap: 14px; padding: 12px; border-radius: 14px; background: #1c1c1f; color: inherit; text-decoration: none; margin-bottom: 10px; }
+  .game img { width: 56px; height: 56px; border-radius: 12px; image-rendering: pixelated; }
+  .game b { display: block; font-size: 17px; }
+  .game span { font-size: 13px; color: #888; }
+</style>
+</head>
+<body>
+<main>
+  <h1>세이브 포인트</h1>
+  <div class="sub">이 화면을 홈 화면에 추가하면 Windows 95 파일을 모든 게임이 같이 써서 용량을 아낄 수 있어요.</div>
+  <!-- 게임을 추가할 때 여기에 한 줄씩 -->
+  <a class="game" href="ft1/?hub">
+    <img src="ft1/icon-180.png" alt="">
+    <div><b>파랜드 택틱스 1</b><span>롤플레잉 전략 · Windows 95</span></div>
+  </a>
+</main>
+<script>
+if ("serviceWorker" in navigator && isSecureContext) navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
